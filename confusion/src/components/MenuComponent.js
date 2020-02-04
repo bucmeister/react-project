@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Media } from 'reactstrap';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 import DishDetail from './DishdetailComponent';
+import Comment from './CommentComponent';
 
 class Menu extends Component {
 
@@ -35,10 +36,9 @@ class Menu extends Component {
         return (
             <div className="container">
                 <div className="row">                  
-                    {menu}                
-                </div>
-                <div className="row">
+                    {menu}
                     <DishDetail selectedDish={this.state.selectedDish}/>
+                    <Comment selectedDish={this.state.selectedDish}/>                
                 </div>
             </div>
          );
