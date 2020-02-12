@@ -9,13 +9,15 @@ class Dishdetail extends Component {
   renderDish(dish) {
     if (dish !== null) {
       return (
-        <Card>
-          <CardImg top src={dish.image} alt={dish.name}></CardImg>
-          <CardBody>
-            <CardTitle>{dish.name}</CardTitle>
-            <CardText>{dish.description}</CardText>
-          </CardBody>
-        </Card>
+        <div>
+          <Card>
+            <CardImg top src={dish.image} alt={dish.name}></CardImg>
+            <CardBody>
+              <CardTitle>{dish.name}</CardTitle>
+              <CardText>{dish.description}</CardText>
+            </CardBody>
+          </Card>
+        </div>       
       );
     }
     return <div></div>;
@@ -49,6 +51,7 @@ class Dishdetail extends Component {
           ) : (
             <div></div>
           )}
+          {/* {console.log(dish)} */}
         </div>
       );
     }
