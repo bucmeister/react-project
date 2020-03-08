@@ -3903,6 +3903,7 @@ __metadata:
     react-redux-form: ^1.16.14
     react-router-dom: ^5.1.2
     react-scripts: ^3.4.0
+    react-transition-group: ^4.3.0
     reactstrap: ^5.0.0
     redux: ^4.0.5
     redux-logger: ^3.0.6
@@ -4435,7 +4436,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^2.2.0":
+"csstype@npm:^2.2.0, csstype@npm:^2.6.7":
   version: 2.6.9
   resolution: "csstype@npm:2.6.9"
   checksum: cee488325e6d12e65bbfdc318b030c41c47ce309d515f394e3b1a2cb44d7aaa0b91f43383d245155f97b5fff946f9ef02d4f6b1d1fa50f5763e54cbc71cf867e
@@ -4795,6 +4796,16 @@ __metadata:
   dependencies:
     "@babel/runtime": ^7.1.2
   checksum: aa9d57a13df3447f7dd6cf3276eebcdd3e567a212fa8146c62c281de33ae35c89dd05b48cb55396e74da37ea212457d5913de09cf432ad9c55900f69b7ecd731
+  languageName: node
+  linkType: hard
+
+"dom-helpers@npm:^5.0.1":
+  version: 5.1.3
+  resolution: "dom-helpers@npm:5.1.3"
+  dependencies:
+    "@babel/runtime": ^7.6.3
+    csstype: ^2.6.7
+  checksum: 60610e9e5ab15cffd207a208057683d8600004a93b999baec7672b8d96e78388d6f3ffeda1047e32aca7dac907a451b118b247ec069aac7882381062e5180257
   languageName: node
   linkType: hard
 
@@ -11557,6 +11568,21 @@ fsevents@^1.2.7:
     react: ">=15.0.0"
     react-dom: ">=15.0.0"
   checksum: 83e1c71ef3295d3f915f61627015501cd48c43c0cf37738614dc807a6664c236c81fc80e0109502e0600e508f4281ca6ba17b36803959e64ec2a9a304e090cbc
+  languageName: node
+  linkType: hard
+
+"react-transition-group@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "react-transition-group@npm:4.3.0"
+  dependencies:
+    "@babel/runtime": ^7.5.5
+    dom-helpers: ^5.0.1
+    loose-envify: ^1.4.0
+    prop-types: ^15.6.2
+  peerDependencies:
+    react: ">=16.6.0"
+    react-dom: ">=16.6.0"
+  checksum: 2ce975dfa41b8b15be8980323f551efda758ba1cb45e5b305d25eb230de8272a1fa04469ff7b2846588c6a728030c27f52bce25a7d92956382435352edd3aa37
   languageName: node
   linkType: hard
 
