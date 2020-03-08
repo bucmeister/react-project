@@ -5,6 +5,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 const minLength = len => val => val && val.length >= len;
 const maxLength = len => val => !val || val.length <= len;
@@ -111,6 +112,10 @@ function RenderDish({dish}) {
     if (dish !== null) {
       return (
         <div>
+          <FadeTransform in
+                transformProps={{
+                    exitTransform: 'scale(0.5) translateY(-50%)'
+                }}>
           <Card>
             <CardImg top src={baseUrl + dish.image} alt={dish.name}></CardImg>
             <CardBody>
@@ -118,6 +123,7 @@ function RenderDish({dish}) {
               <CardText>{dish.description}</CardText>
             </CardBody>
           </Card>
+          </FadeTransform>
         </div>       
       );
     }
@@ -138,16 +144,18 @@ function RenderComments(props) {
       };
 
       return (
-        <div>
-        <p>{comment.comment}</p>
-        <p>
-          {comment.author},{" "}
-          {new Date(comment.date).toLocaleDateString(
-            "en-US",
-            options
-          )}
-        </p>
-      </div>
+        <Fade in>
+          <div>
+            <p>{comment.comment}</p>
+            <p>
+              {comment.author},{" "}
+              {new Date(comment.date).toLocaleDateString(
+                "en-US",
+                options
+              )}
+            </p>
+        </div>
+      </Fade>
       )
     }
     );
@@ -159,7 +167,9 @@ function RenderComments(props) {
           {comments ? (
             <div>
               <ul className='list-unstyled'>
-               {commentsList}
+                <Stagger in>
+                  {commentsList}
+                </Stagger>
               </ul>
               <CommentForm dishId={dishId} postComment={postComment}/>
             </div>
