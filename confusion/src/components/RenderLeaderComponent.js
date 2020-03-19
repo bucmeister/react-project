@@ -1,5 +1,6 @@
 import React from 'react';
 import { Media } from 'reactstrap';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 
 const RenderLeader = (props) => {
@@ -22,7 +23,9 @@ const RenderLeader = (props) => {
 
     return (
         <div className="container">
+            <Stagger in>
              {RenderThem}
+            </Stagger>
         </div>
     );
 }
